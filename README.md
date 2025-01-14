@@ -207,7 +207,7 @@ Information from feeds and taxonomies, tags can be placed on events and attribut
 
 In our CobaltStrike event example, we can add tags by clicking on the buttons in the Tags section and searching from the available options appropriate to the case. The buttons represent global tags and local tags, respectively. It is also important to note that you can add your unique tags to your MISP instance as an analyst or organisation that would allow you to ingest, navigate through and share information quickly within the organisation.
 
-![image](https://github.com/KAmii-cxo/MISP/blob/main/gifs/taxonomies.gif)
+![image](https://github.com/KAmii-cxo/MISP/blob/main/gifs/Tagging.gif)
 
 ## Tagging Best Practices
 
