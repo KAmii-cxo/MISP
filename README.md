@@ -221,3 +221,11 @@ The following tags can be considered a must-have to provide a well-defined event
 - **Confidence**: Provides an indication as to whether or not the data being shared is of high quality and has been vetted so that it can be trusted to be good for immediate usage.
 - **Origin**: Describes the source of information and whether it was from automation or manual investigation.
 - **Permissible Actions Protocol**: An advanced classification that indicates how the data can be used to search for compromises within the organisation.
+
+## Additional Resources
+
+   1. [MISP Book](https://www.circl.lu/doc/misp/)
+   2. [MISP GitHub](https://github.com/MISP/)
+   3. [MISP Training module 1](https://www.youtube.com/watch?v=aM7czPsQyaI)
+   4. [MISP Training module 2](https://www.youtube.com/watch?v=Jqp8CVHtNVk)
+
