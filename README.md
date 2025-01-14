@@ -51,3 +51,43 @@ The following terms are frequently used within MISP and are essential to underst
 2. **Data Correlation**: MISP automatically correlates and enriches the data with context, such as attack patterns or related threat actors.
 3. **Sharing**: The enriched threat intelligence is shared securely with trusted partners or communities.
 4. **Action**: Organizations take action by updating security measures, creating detection rules, or investigating ongoing attacks.
+
+## TASK 3 Using The System
+
+## MISP Dashboard Overview
+
+The analyst’s view of MISP provides essential functionalities to track, share, and correlate events and IOCs identified during investigations. The dashboard’s menu offers several options, which we will explore in detail:
+
+1. **Home Button**: Takes you back to the application’s start screen, the event index page, or a custom home page set via the star icon in the top bar.
+   
+2. **Event Actions**: MISP organizes all malware data as an event object, which is described by its associated attributes. The Event Actions menu provides access to functionality related to:
+   - Creation, modification, and deletion of events
+   - Publishing, searching, and listing events and attributes.
+
+3. **Dashboard**: Allows you to create a custom dashboard using widgets, tailored to your needs.
+
+4. **Galaxies**: A shortcut to the list of MISP Galaxies available on the MISP instance. More information on this is available in the Feeds & Taxonomies Task.
+
+5. **Input Filters**: Input filters control how data is entered into MISP. Administrators can define rules for:
+   - Attribute entry validation by type
+   - Regular expression replacements and blocklists for specific values
+   - Blocking certain values from being exported.
+   
+   Users can view these rules, while administrators can modify them.
+
+6. **Global Actions**: Provides access to general information about MISP and your current instance, including:
+   - Profile management
+   - Access to the manual, news, and terms of use
+   - A list of active organizations on the instance with a histogram of their contributions by attribute type.
+
+7. **MISP**: A simple link to your base URL for easy navigation.
+
+8. **Name**: The auto-generated name (from your email address) of the currently logged-in user.
+
+9. **Envelope**: A link to your User Dashboard, where you can check notifications and recent changes, including proposals received for your organization.
+
+10. **Log Out**: The button to log out and end your session immediately.
+
+![image](https://github.com/user-attachments/assets/2608ebe8-9c78-4c65-a5bf-232974504c2d)
+
+
