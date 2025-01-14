@@ -18,25 +18,36 @@ MISP is an open-source threat intelligence platform designed to improve the shar
 - **Malware Analysis**: Share and retrieve detailed information about malware families, behaviors, and mitigation strategies.
 - **Collaboration**: Enable collaboration between different organizations, enhancing the collective defense against emerging threats.
 
+![image](https://github.com/user-attachments/assets/442e951b-faba-40e7-8262-4990a88a9abc)
+
+## MISP Core Functionalities
+
+MISP provides several core functionalities that are key to its operation:
+
+1. **IOC Database**: Stores both technical and non-technical information related to malware samples, incidents, attackers, and intelligence.
+2. **Automatic Correlation**: Identifies relationships between attributes and indicators from malware, attack campaigns, or analysis.
+3. **Data Sharing**: Facilitates sharing information using different distribution models across multiple MISP instances.
+4. **Import & Export Features**: Supports importing and exporting events in various formats for integration with other systems, such as NIDS, HIDS, and OpenIOC.
+5. **Event Graph**: Displays the relationships between objects and attributes identified in events.
+6. **API Support**: Allows integration with custom systems for fetching and exporting events and intelligence.
+
+## Common Terms in MISP
+
+The following terms are frequently used within MISP and are essential to understanding its functionalities:
+
+- **Events**: A collection of contextually linked information.
+- **Attributes**: Individual data points associated with an event, such as network or system indicators.
+- **Objects**: Custom compositions of attributes.
+- **Object References**: Relationships between different objects.
+- **Sightings**: Time-specific occurrences of a data point or attribute detected to enhance credibility.
+- **Tags**: Labels attached to events or attributes.
+- **Taxonomies**: Classification libraries used to tag, classify, and organize information.
+- **Galaxies**: Knowledge base items used for labeling events or attributes.
+- **Indicators**: Information pieces that detect suspicious or malicious cyber activity.
+
+
 ## Example Workflow
 1. **Data Ingestion**: Threat data (hashes, domains, IPs, TTPs, etc.) is ingested into the platform.
 2. **Data Correlation**: MISP automatically correlates and enriches the data with context, such as attack patterns or related threat actors.
 3. **Sharing**: The enriched threat intelligence is shared securely with trusted partners or communities.
 4. **Action**: Organizations take action by updating security measures, creating detection rules, or investigating ongoing attacks.
-
-## Installation
-For installation instructions, visit the official [MISP Installation Guide](https://www.misp-project.org/installation/).
-
-## Documentation
-- [MISP Project Documentation](https://www.misp-project.org/documentation/)
-- [MISP User Guide](https://www.misp-project.org/user-guide/)
-
-## Contributing
-Contributions are welcome! If you’d like to contribute to MISP, please fork the repository and submit pull requests. Refer to the [contribution guidelines](https://github.com/MISP/MISP/blob/master/CONTRIBUTING.md) for more information.
-
-## Community and Support
-- Join the MISP community by following the [MISP mailing list](https://www.misp-project.org/mailing-lists/) for updates and discussions.
-- For support, visit the [MISP GitHub repository](https://github.com/MISP/MISP).
-
-## License
-MISP is released under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html).
