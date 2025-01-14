@@ -90,4 +90,87 @@ The analyst’s view of MISP provides essential functionalities to track, share,
 
 ![image](https://github.com/user-attachments/assets/2608ebe8-9c78-4c65-a5bf-232974504c2d)
 
+## Event Management in MISP
+
+The **Event Actions** tab is where analysts create malware investigation correlations by adding descriptions and attributes related to the investigation. The process can be broken down into three major phases:
+
+1. **Event Creation**
+2. **Populating Events with Attributes and Attachments**
+3. **Publishing**
+
+In this section, we’ll follow the process to create an event based on an investigation of **Emotet Epoch 4 infection** with **Cobalt Strike** and **Spambot**, sourced from **malware-traffic-analysis.net**. The following steps outline the process.
+
+### 1. Event Creation
+
+Initially, events serve as a storage for general information about an incident or investigation. To create an event:
+
+- Click the **Add Event** button.
+- Provide a description of the event.
+- Set the appropriate **time** and **risk level** for the incident.
+
+Next, specify the **distribution level** for the event on the MISP network and community. MISP offers the following distribution options:
+
+- **Your Organisation Only**: This restricts visibility to members of your organisation.
+- **Community-Only**: Visible to users in your MISP community, including your organisation, organisations on this MISP server, and other organisations running MISP servers that synchronise with this server.
+- **Connected Communities**: Visible to users in your MISP community, including organisations on this MISP server, organisations on MISP servers synchronising with this server, and hosting organisations of servers two hops away.
+- **All Communities**: This shares the event with all MISP communities, allowing it to propagate freely between servers.
+
+Additionally, MISP allows you to add a **sharing group**, where you can define a predefined list of organisations with which to share the event.
+
+![image](https://github.com/user-attachments/assets/9dad66a7-d970-4732-847c-5e1813a4e8f5)
+
+Event details can also be populated by filling out predefined fields on a defined template, including adding attributes to the event. We can use the email details of the CobaltStrike investigation to populate details of our event. We will be using the Phishing E-mail category from the templates.
+
+![image](https://github.com/user-attachments/assets/e3df158e-9d6a-4361-b073-8cd58c170205)
+
+## Attributes & Attachments in MISP
+
+Attributes can be added manually or imported from other formats, such as **OpenIOC** and **ThreatConnect**. To add them manually, click the **Add Attribute** button and populate the form fields.
+
+### Key Options to Note:
+
+1. **For Intrusion Detection System (IDS)**: 
+   - This option allows the attribute to be used as an IDS signature when exporting **NIDS** data, unless it overrides the permitted list.
+   - If not set, the attribute is considered as **contextual information** and will not be used for automatic detection.
+
+2. **Batch Import**: 
+   - If multiple attributes of the same type need to be entered (e.g., a list of IP addresses), you can add them all in the same value field, separated by line breaks.
+   - This enables the system to create separate lines for each attribute.
+
+### Example:
+
+In our example, we add an **Emotet Epoch 4 C2 IP address** associated with the infection as our attribute, which was obtained from the **IOC text file**.
+
+
+![image](https://github.com/user-attachments/assets/09e38f53-dcc7-40d6-8610-973e8e10f9a6)
+
+The analyst can also add file attachments to the event. These may include malware, report files from external analysis or simply artefacts dropped by the malware. We have added the Cobalt Strike EXE binary file to our event in our example. You also have to check the Malware checkbox to mark the file as malware. This will ensure that it is zipped and passworded to protect users from accidentally downloading and executing the file.
+
+
+![image](https://github.com/user-attachments/assets/61b5e7d3-f55b-4c42-8a8a-247534484c90)
+
+## Publish Event
+
+Once the analysts have created events, the organisation admin will review and publish those events to add them to the pool of events. This will also share the events to the distribution channels set during the creation of the events.
+
+
+![image](https://github.com/user-attachments/assets/9de86c45-2d69-4a91-a34d-a3009dfbc856)
+
+## Task 4: Feeds & Taxonomies
+
+### Feeds
+
+Feeds are resources that contain indicators, which can be imported into MISP to provide attributed information about security events. These feeds help analysts and organisations stay updated with continuously evolving threats and adversaries, supporting proactive defense against attacks.
+
+MISP Feeds allow you to:
+
+- **Exchange Threat Information**: Share and receive valuable threat data across different platforms.
+- **Preview Events**: View events along with their associated attributes and objects.
+- **Select and Import Events**: Choose specific events to import into your instance for further analysis.
+- **Correlate Attributes**: Identify and correlate attributes between events and feeds to uncover patterns and relationships.
+
+Feeds are enabled and managed by the **Site Admin**, allowing analysts to access event and indicator data efficiently.
+
+
+![image](https://github.com/user-attachments/assets/39976d0f-222e-4ad6-8de1-468d2d4f4bc1)
 
