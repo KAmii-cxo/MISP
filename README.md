@@ -1,5 +1,3 @@
-# MISP
-
 # MISP - Malware Information Sharing Platform
 
 MISP is an open-source threat intelligence platform designed to improve the sharing and analysis of cyber threat data. It facilitates collaboration between organizations, CERTs (Computer Emergency Response Teams), ISACs (Information Sharing and Analysis Centers), and other security professionals by providing a centralized hub for storing, sharing, and correlating threat intelligence.
@@ -147,14 +145,14 @@ In our example, we add an **Emotet Epoch 4 C2 IP address** associated with the i
 The analyst can also add file attachments to the event. These may include malware, report files from external analysis or simply artefacts dropped by the malware. We have added the Cobalt Strike EXE binary file to our event in our example. You also have to check the Malware checkbox to mark the file as malware. This will ensure that it is zipped and passworded to protect users from accidentally downloading and executing the file.
 
 
-![image](https://github.com/user-attachments/assets/61b5e7d3-f55b-4c42-8a8a-247534484c90)
+![image](https://github.com/KAmii-cxo/MISP/blob/main/gifs/0_0CLOTPuuEJmkg3Uo.gif)
 
 ## Publish Event
 
 Once the analysts have created events, the organisation admin will review and publish those events to add them to the pool of events. This will also share the events to the distribution channels set during the creation of the events.
 
 
-![image](https://github.com/user-attachments/assets/9de86c45-2d69-4a91-a34d-a3009dfbc856)
+![image](https://github.com/KAmii-cxo/MISP/blob/main/gifs/publishevent.gif)
 
 ## Task 4: Feeds & Taxonomies
 
@@ -172,5 +170,54 @@ MISP Feeds allow you to:
 Feeds are enabled and managed by the **Site Admin**, allowing analysts to access event and indicator data efficiently.
 
 
-![image](https://github.com/user-attachments/assets/39976d0f-222e-4ad6-8de1-468d2d4f4bc1)
+![image](https://github.com/KAmii-cxo/MISP/blob/main/gifs/feed%20n%20taxonomies.gif)
 
+## Taxonomies
+
+A taxonomy is a means of classifying information based on standard features or attributes. On MISP, taxonomies are used to categorise events, indicators and threat actors based on tags that identify them.
+
+![image](https://github.com/user-attachments/assets/21929726-177b-443c-9cb0-8eb0c74630f5)
+
+Taxonomies play a crucial role in MISP by helping analysts classify and process events effectively. Analysts can use taxonomies to:
+
+1. **Set events for further processing** by external tools such as VirusTotal.  
+2. **Ensure events are classified appropriately** before the Organisation Admin publishes them.  
+3. **Enrich intrusion detection systems (IDS)** export values with tags that fit specific deployments.  
+
+#### **Taxonomy Structure**
+Taxonomies in MISP are expressed using machine tags, which consist of three key components:
+
+- **Namespace**: Defines the tag's property to be used.  
+- **Predicate**: Specifies the property attached to the data.  
+- **Value**: Provides numerical or textual details that map to the property.  
+
+**Example (Source: MISP):**
+```
+Namespace:  threat 
+Predicate:  level 
+Value:      high
+```
+Taxonomies are listed under the Event Actions tab. The site admin can enable relevant taxonomies.
+
+![image](https://github.com/KAmii-cxo/MISP/blob/main/gifs/taxonomies.gif)
+
+## Tagging
+
+Information from feeds and taxonomies, tags can be placed on events and attributes to identify them based on the indicators or threats identified correctly. Tagging allows for effective sharing of threat information between users, communities and other organisations using MISP to identify various threats.
+
+In our CobaltStrike event example, we can add tags by clicking on the buttons in the Tags section and searching from the available options appropriate to the case. The buttons represent global tags and local tags, respectively. It is also important to note that you can add your unique tags to your MISP instance as an analyst or organisation that would allow you to ingest, navigate through and share information quickly within the organisation.
+
+![image](https://github.com/KAmii-cxo/MISP/blob/main/gifs/taxonomies.gif)
+
+## Tagging Best Practices
+
+## Tagging at Event Level vs Attribute Level
+Tags can be added to an event and attributes. Tags are also inheritable when set. It is recommended to set tags on the entire event and only include tags on attributes when they are an exception from what the event indicates. This will provide a more fine-grained analysis.
+
+## The Minimal Subset of Tags
+The following tags can be considered a must-have to provide a well-defined event for distribution:
+
+- **Traffic Light Protocol**: Provides a colour schema to guide how intelligence can be shared.
+- **Confidence**: Provides an indication as to whether or not the data being shared is of high quality and has been vetted so that it can be trusted to be good for immediate usage.
+- **Origin**: Describes the source of information and whether it was from automation or manual investigation.
+- **Permissible Actions Protocol**: An advanced classification that indicates how the data can be used to search for compromises within the organisation.
