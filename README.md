@@ -222,6 +222,26 @@ The following tags can be considered a must-have to provide a well-defined event
 - **Origin**: Describes the source of information and whether it was from automation or manual investigation.
 - **Permissible Actions Protocol**: An advanced classification that indicates how the data can be used to search for compromises within the organisation.
 
+TASK 5
+   1. First, set PupyRAT at Filter . The event ID is 1146
+      ![image](https://github.com/user-attachments/assets/f4d5499c-e2c0-4a10-9737-9ceffb55bebe)
+      ![image](https://github.com/user-attachments/assets/9dfa6fa6-15c5-4e56-b583-a2f7d0c93356)
+
+   2. Remote Access 
+   3. The IP address is 89.107.62.39
+
+      ![image](https://github.com/user-attachments/assets/ecd25faf-6e3d-4aab-996b-106ad530c733)
+
+   4. Magic Hound is known to use this form of attack. 
+
+      ![image](https://github.com/user-attachments/assets/95f301b2-ae22-460f-b85b-7ae61045281e)
+
+   5. OSINT is the answer
+
+      ![image](https://github.com/user-attachments/assets/52c10598-aefd-488e-8b7a-93b30bd27d1a)
+
+   And that's all about MISP that we learn just now. It's time to practise in the real-world, detecting threats and protecting digital enviroment. For some additional infos, you can check below and dig up more. 
+         
 ## Additional Resources
 
    1. [MISP Book](https://www.circl.lu/doc/misp/)
